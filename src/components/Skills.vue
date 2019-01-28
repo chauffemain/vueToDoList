@@ -6,10 +6,11 @@
           {{ index }}. {{ data.skill }}
         </li>
       </ul>
-
+          </div>
+    <div>
       <p v-if="skills.length >= 1">You have more than one skill</p>
       <p v-else>You have one or less skills</p>
-    </div>
+</div>
   </div>
 </template>
 
@@ -26,7 +27,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped src="./Skills.css">
 h1,
 h2 {
   font-weight: normal;

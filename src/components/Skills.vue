@@ -6,11 +6,13 @@
           {{ index }}. {{ data.skill }}
         </li>
       </ul>
-          </div>
+    </div>
     <div>
       <p v-if="skills.length >= 1">You have more than one skill</p>
       <p v-else>You have one or less skills</p>
-</div>
+    </div>
+
+    <div v-bind:class="{ alert: showAlert }"></div>
   </div>
 </template>
 
@@ -20,7 +22,9 @@ export default {
   data() {
     return {
       //properties and values
-      skills: [{ skill: "Vue" }, { skill: "Frontend dev" }]
+      skills: [{ skill: "Vue" }, { skill: "Frontend dev" }],
+
+      showAlert: true
     };
   }
 };
@@ -28,6 +32,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped src="./Skills.css">
+,
 h1,
 h2 {
   font-weight: normal;

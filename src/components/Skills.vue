@@ -1,17 +1,15 @@
 <template>
   <div class="hello">
-    {{ name }}
-    {{ btnState ? "The button is disabled" : "The button is active" }}
     <div class="holder">
       <ul>
         <li v-for="(data, index) in skills" :key="index">
           {{ index }}. {{ data.skill }}
         </li>
       </ul>
+
+      <p v-if="skills.length >= 1">You have more than one skill</p>
+      <p v-else>You have one or less skills</p>
     </div>
-    <button v-on:click="changeName" v-bind:disabled="btnState">
-      Change Name
-    </button>
   </div>
 </template>
 
@@ -21,9 +19,6 @@ export default {
   data() {
     return {
       //properties and values
-      name: "Owner",
-      msg: "Welcome to Your Vue.js App",
-      btnState: true,
       skills: [{ skill: "Vue" }, { skill: "Frontend dev" }]
     };
   }

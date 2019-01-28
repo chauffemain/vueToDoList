@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">Skills</div>
+  <div class="hello">{{ name }}</div>
 </template>
 
 <script>
@@ -7,6 +7,8 @@ export default {
   name: "Skills",
   data() {
     return {
+      //properties and values
+      name: "Owner",
       msg: "Welcome to Your Vue.js App"
     };
   }

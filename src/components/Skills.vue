@@ -1,5 +1,11 @@
 <template>
-  <div class="hello">{{ name }}</div>
+  <div class="hello">
+    {{ name }}
+
+    <button v-on:click="changeName" v-bind:disabled="btnState">
+      Change Name
+    </button>
+  </div>
 </template>
 
 <script>
@@ -9,7 +15,8 @@ export default {
     return {
       //properties and values
       name: "Owner",
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
+      btnState: true
     };
   }
 };
